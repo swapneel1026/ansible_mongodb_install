@@ -1,6 +1,0 @@
-#SPDX-License-Identifier: MIT-0
----
-# defaults file for nginx
-nginx_version: latest
-nginx_port: 80
-nginx_user: www-data

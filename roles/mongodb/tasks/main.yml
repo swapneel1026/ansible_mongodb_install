@@ -2,11 +2,11 @@
 - name: Include OS specific vars
   include_vars: "{{ ansible_os_family }}.yml"
 
-- name: Install nginx
+- name: nstall MongoDB
   include_tasks: install.yml
 
-- name: Configure nginx
+- name: Configure MongoDB
   include_tasks: config.yml
 
-- name: Start service
+- name: Start MongoDB service
   include_tasks: service.yml

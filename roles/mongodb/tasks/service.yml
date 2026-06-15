@@ -1,0 +1,6 @@
+---
+- name: Enable and start MongoDB
+  service:
+    name: "{{ mongodb_service }}"
+    state: started
+    enabled: true

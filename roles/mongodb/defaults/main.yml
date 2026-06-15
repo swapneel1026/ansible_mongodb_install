@@ -1,0 +1,12 @@
+#SPDX-License-Identifier: MIT-0
+---
+# defaults file for mongodb
+mongodb_version: "7.0"
+mongodb_package_name: mongodb-org
+mongodb_service_name: mongod
+
+mongodb_port: 27017
+mongodb_bind_ip: "0.0.0.0"
+
+mongodb_data_path: /var/lib/mongo
+mongodb_log_path: /var/log/mongodb/mongod.log

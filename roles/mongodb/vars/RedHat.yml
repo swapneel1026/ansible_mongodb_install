@@ -1,0 +1,7 @@
+---
+mongodb_package: mongodb-org
+mongodb_service: mongod
+mongodb_user: mongod
+
+mongodb_repo_baseurl: "https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/7.0/x86_64/"
+mongodb_gpg_key: "https://pgp.mongodb.com/server-7.0.asc"

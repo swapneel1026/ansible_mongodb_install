@@ -1,7 +1,7 @@
 ---
-- name: Configure nginx servers
+- name: Install MongoDB
   hosts: all
   become: true
 
   roles:
-    - nginx
+    - mongodb

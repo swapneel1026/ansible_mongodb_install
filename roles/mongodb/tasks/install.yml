@@ -1,0 +1,5 @@
+---
+- name: Install MongoDB package
+  package:
+    name: "{{ mongodb_package}}"
+    state: present

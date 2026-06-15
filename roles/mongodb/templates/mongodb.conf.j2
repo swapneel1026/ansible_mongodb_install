@@ -1,0 +1,16 @@
+# mongod.conf
+
+storage:
+dbPath: {{ mongodb_data_path }}
+
+systemLog:
+destination: file
+path: {{ mongodb_log_path }}
+logAppend: true
+
+net:
+port: {{ mongodb_port }}
+bindIp: {{ mongodb_bind_ip }}
+
+processManagement:
+fork: false
