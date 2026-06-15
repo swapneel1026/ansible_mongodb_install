@@ -1,0 +1,12 @@
+---
+- name: Include OS specific vars
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: Install nginx
+  include_tasks: install.yml
+
+- name: Configure nginx
+  include_tasks: config.yml
+
+- name: Start service
+  include_tasks: service.yml

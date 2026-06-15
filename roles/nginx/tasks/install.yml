@@ -1,0 +1,5 @@
+---
+- name: Install nginx package
+  package:
+    name: "{{ nginx_package }}"
+    state: "{{ nginx_version }}"

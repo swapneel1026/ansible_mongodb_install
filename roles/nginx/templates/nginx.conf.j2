@@ -1,0 +1,15 @@
+user {{ nginx_user }};
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    server {
+        listen {{ nginx_port }};
+
+        location / {
+            return 200 "Nginx Configured Successfully";
+        }
+    }
+}
