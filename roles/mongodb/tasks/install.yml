@@ -1,13 +1,19 @@
 ---
-- name: Install MongoDB package
-  apt:
-    name: mongodb
+- name: Add MongoDB GPG key
+  apt_key:
+    url: https://pgp.mongodb.com/server-7.0.asc
     state: present
-    update_cache: yes
   when: ansible_os_family == "Debian"
 
-- name: Install MongoDB package
-  yum:
-    name: mongodb
+- name: Add MongoDB repository
+  apt_repository:
+    repo: "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/7.0 multiverse"
     state: present
-  when: ansible_os_family == "RedHat"
+  when: ansible_os_family == "Debian"
+
+- name: Install MongoDB
+  apt:
+    name: mongodb-org
+  state: present
+  update_cache: yes
+  when: ansible_os_family == "Debian"
